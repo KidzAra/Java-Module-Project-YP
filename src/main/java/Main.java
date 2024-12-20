@@ -48,7 +48,7 @@ public class Main {
         car secondCar = new car(car2name, car2speed);
         car thirdCar = new car(car3name, car3speed);
 
-        System.out.println(race.race(firstCar, secondCar, thirdCar));
+        System.out.println("Самая быстрая машина:" + race.race(firstCar, secondCar, thirdCar));
 
     }
 }
