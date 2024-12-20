@@ -8,12 +8,21 @@ public class Main {
         int car2speed;
         int car3speed;
 
-        System.out.println("Введите название первой машины");
-        String car1name = scanner.nextLine();
-        System.out.println("Введите название второй машины");
-        String car2name = scanner.nextLine();
-        System.out.println("Введите название третьей машины");
-        String car3name = scanner.nextLine();
+        String car1name = null;
+        String car2name = null;
+        String car3name = null;
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Введите название машины " + (i + 1) + ":");
+            String carName = scanner.nextLine();
+            if (i == 0) {
+                car1name = carName;
+            } else if (i == 1) {
+                car2name = carName;
+            } else if (i == 2) {
+                car3name = carName;
+            }
+        }
 
         System.out.println("Введите скорость первой машины");
         while(true) {
