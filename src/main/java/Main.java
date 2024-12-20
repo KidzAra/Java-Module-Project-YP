@@ -4,10 +4,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int car1speed;
-        int car2speed;
-        int car3speed;
-
         String car1name = null;
         String car2name = null;
         String car3name = null;
@@ -25,32 +21,11 @@ public class Main {
         }
 
         System.out.println("Введите скорость первой машины");
-        while(true) {
-            car1speed = scanner.nextInt();
-            if (car1speed > 0 && car1speed <= 250){
-                break;
-            } else {
-                System.out.println("Скорость должна быть не меньше 0 и не больше 250");
-            }
-        }
+        int car1speed = validInput.getValidSpeed(scanner);
         System.out.println("Введите скорость второй машины");
-        while(true) {
-            car2speed = scanner.nextInt();
-            if (car2speed > 0 && car2speed <= 250){
-                break;
-            } else {
-                System.out.println("Скорость должна быть не меньше 0 и не больше 250");
-            }
-        }
+        int car2speed = validInput.getValidSpeed(scanner);
         System.out.println("Введите скорость третьей машины");
-        while(true) {
-            car3speed = scanner.nextInt();
-            if (car3speed > 0 && car3speed <= 250){
-                break;
-            } else {
-                System.out.println("Скорость должна быть не меньше 0 и не больше 250");
-            }
-        }
+        int car3speed = validInput.getValidSpeed(scanner);
 
 
         car firstCar = new car(car1name, car1speed);
